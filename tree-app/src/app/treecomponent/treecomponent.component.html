@@ -1,0 +1,11 @@
+
+ <div *ngFor="let data of tree">
+<input #input (keyup)="updateName(data,input.value)" value="{{inputValue}}" >
+<button (click)="add(data)">Add node</button>
+<button (click)="delete(data)" (show)="data.nodes.length > 0">Delete nodes</button>
+ <li *ngFor="let data of data.nodes" >
+ <app-treecomponent></app-treecomponent>
+ </li>
+ </div> 
+
+
